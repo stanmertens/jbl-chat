@@ -51,6 +51,6 @@ class ConversationHTMX(View):
 @method_decorator(login_required, name="dispatch")
 class UsersHTMX(View):
     def get(self, request: HttpRequest, user_id: int) -> HttpResponse:
-        users = User.objects.exclude(id=request.user.id)
+        users = User.objects.exclude(id=request.user.id).order_by("username")
         html = render(request, "chat/_users.html", {"users": users})
         return HttpResponse(html, content_type="text/html")
