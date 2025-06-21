@@ -18,14 +18,14 @@ Please submit your solution as a pull request to our public repository. Happy co
 
 ## How to run
 
-1. Set up your virtual environment:
+Set up your virtual environment:
    ```bash
    python3.9 -m venv .venv
    source .venv/bin/activate
    make requirements
    ```
 
-2. Set up and start Django:
+Set up and start Django:
    ```bash
    cd jbl_chat
    python -m manage migrate
@@ -34,4 +34,4 @@ Please submit your solution as a pull request to our public repository. Happy co
    python -m manage runserver
    ```
 
-3. Login using the credentials from the seeder.
+Login using the credentials from the seeder.
