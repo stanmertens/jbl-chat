@@ -1,0 +1,28 @@
+.bg-primary {
+  background-color: #0068FF;
+}
+
+.bg-tertiary {
+  background-color: #FFF9F0;
+}
+
+.user:hover {
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+.pt-header {
+    padding-top: 66px !important;
+}
+
+.mw-70-perc {
+    max-width: 70%;
+}
+
+.w-300-px {
+    width: 300px;
+}
+
+.mh-40-px {
+    max-height: 40px;
+}

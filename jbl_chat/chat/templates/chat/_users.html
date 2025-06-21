@@ -1,0 +1,15 @@
+{% for user in users %}
+    <div class="d-flex flex-row user rounded-2"
+         role="button"
+         hx-get="{% url 'htmx_conversations_id' user.id %}"
+         hx-target="#conversation"
+         hx-swap="innerHTML">
+        <img src="{{ user.image_url }}"
+             class="img-fluid mh-40-px rounded-circle object-fit-contain py-1"
+             heigth="40"
+             width="40">
+        <div class="p-2">{{ user.username }}</div>
+    </div>
+{% empty %}
+    <li>No users found</li>
+{% endfor %}

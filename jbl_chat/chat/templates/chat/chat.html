@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="h-100 pt-header">
+        <div class="h-100 container">
+            <div class="h-100 row">
+                <div class="h-100 col-12 col-sm-4 p-3 bg-tertiary border-end border-1 overflow-y-scroll">
+                    <span class="h5 p-2 mb-0">Conversations</span>
+                    <div hx-get="{% url 'htmx_users_id' user.id %}"
+                         hx-trigger="load"
+                         hx-swap="innerHTML"></div>
+                </div>
+                <div class="h-100 col-12 col-sm-8 bg-light">
+                    <div id="conversation" class="h-100">
+                        <div class="h-100 d-flex flex-column justify-content-center align-items-center">
+                            <span class="text-muted">Select a Jobylonian to get started</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
